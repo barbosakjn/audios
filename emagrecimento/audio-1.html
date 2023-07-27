@@ -115,7 +115,7 @@
 <body>
   <div class="audio-container" id="audioContainer">
     <!-- Cole o link do Seu áudio Abaixo-->
-    <audio class="plyr" src="https://storage.healthpainrelief.online/typebot/public/typebots/kk77omi5wvfyya9fbr7x6rl3/blocks/m435v6oefxku0cm0oyzcg2mb?v=1690326060614"autoplay></audio>
+    <audio class="plyr" src="https://storage.healthpainrelief.online/typebot/public/typebots/kk77omi5wvfyya9fbr7x6rl3/blocks/m435v6oefxku0cm0oyzcg2mb?v=1690326060614"></audio>
     <!-- Cole o link da Sua imagem Abaixo-->
     <img src="https://i.postimg.cc/BQnV8DcS/Dr-Paul-6.png" alt="Imagem">
     <div class="microphone-icon">
@@ -168,6 +168,11 @@
         const playButton = audioContainer.querySelector('.plyr__controls button[data-plyr="play"]');
         playButton.click();
       });
+      });
+
+    audioElement.addEventListener('loadeddata', () => {
+      audioElement.play();
+    });
     });
   </script>
 </body>
